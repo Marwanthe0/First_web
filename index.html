@@ -1,13 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My first for git</title>
-    <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
-    <h1>Heading</h1>
-    <p>Hello Paragraph</p>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Marwan | Web Developer Portfolio</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <header>
+            <h1 id="logo">Marwan</h1>
+            <nav id="nav">
+                <ul>
+                    <li><button onclick="scrollToSection('about')">About</button></li>
+                    <li><button onclick="scrollToSection('skills')">Skills</button></li>
+                    <li><button onclick="scrollToSection('projects')">Projects</button></li>
+                    <li><button onclick="scrollToSection('contact')">Contact</button></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="intro" id="about">
+                <div class="profile-pic" aria-label="Profile Picture"><img id = "pfp" src="images/pfp.jpg" alt=""></div>
+                <div class="intro-text">
+                    <h2>Hi, I'm Marwan 👋</h2>
+                    <p>
+                        I'm a passionate web developer and a second-year Bachelor of Computer Science and Engineering student at <b>Jessore University of Science and Technology</b>.
+                    </p>
+                    <p>
+                        I love building beautiful, functional websites and solving challenging problems, especially those related to data structures.
+                    </p>
+                </div>
+            </section>
+            <section class="section" id="skills">
+                <h3>Skills & Interests</h3>
+                <ul class="skills-list">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>React Js</li>
+                    <li>Data Structures</li>
+                    <li>Problem Solving</li>
+                    <li>Git & GitHub</li>
+                    <li>Node js</li>
+                </ul>
+            </section>
+            <section class="section" id="projects">
+                <h3>Projects</h3>
+                <ul class="projects-list">
+                    <li>
+                        <h4>Personal Portfolio Website</h4>
+                        <p>A responsive and modern portfolio site to showcase my skills and projects. Built with HTML, CSS, and JavaScript.</p>
+                    </li>
+                    <li>
+                        <h4>Data Structure Visualizer</h4>
+                        <p>Interactive tool to visualize basic data structures like stacks, queues, and linked lists. Helps students understand core concepts.</p>
+                    </li>
+                    <li>
+                        <h4>Problem Solving Blog</h4>
+                        <p>Blog where I share solutions and explanations for interesting data structure and algorithm problems.</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="section" id="contact">
+                <h3>Contact</h3>
+                <p>
+                    Want to connect or collaborate? <br>
+                    <b>Email:</b> <a href="mailto:marwanthe0@gmail.com" style="color:#4f8cff;">marwanthe0@gmail.com</a>
+                </p>
+            </section>
+        </main>
+        <footer>
+            &copy; 2024 Marwan &mdash; Web Developer | Jessore University of Science and Technology
+        </footer>
+        <script>
+            function scrollToSection(id) {
+                const el = document.getElementById(id);
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }
+        </script>
+    </body>
 </html>
